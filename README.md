@@ -9,10 +9,8 @@ The JavaScript file that handles fetching data from the GitHub API, sorting the 
 #### style.css: 
 Basic CSS for styling the page.
 ### Setup Instructions
-#### 1. 
-Clone the repository. 
-#### 2.
- Open index.html in your web browser, either via file path or localhost. 
+#### 1. Clone the repository. 
+#### 2. Open index.html in your web browser, either via file path or localhost. 
 ### Notes
 As a static site, this project does NOT require a server to run.
 Ensure your browser supports JavaScript and allows external API calls to GitHub. 
