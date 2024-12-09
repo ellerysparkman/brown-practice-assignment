@@ -1,0 +1,279 @@
+/* body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ead7dd;
+    margin: 0;
+} */
+
+.title-row {
+    padding: 25px;
+    align-items: center;
+    text-align: center;
+}
+
+.info-row {
+    padding: 55px;
+    display: flex;
+    width: 100%; 
+
+}
+
+.instructions-row{
+    margin-bottom: 0;
+    padding: 8px;
+    font-size: 19px;
+}
+
+.filter-card{
+    color: greenyellow;
+}
+
+/* Container to position the help icon and speech bubble */
+.help-icon-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* Style for the help icon */
+.help-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff; 
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%; 
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Style for the speech bubble */
+.speech-bubble {
+    visibility: hidden;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+/* Show the speech bubble on hover */
+.help-icon-container:hover .speech-bubble {
+    visibility: visible;
+    opacity: 0.8;
+    transition: background-color 0.5;
+}
+
+/* Change color of icon when hovered */
+.help-icon:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+
+/* Label styling */
+.slider-container .form-label {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+    display: block;
+    flex: 1;
+}
+
+/* Slider styling */
+.slider-bar {
+    /* width:250px; */
+    flex: 2;
+    height: 8px;
+    -webkit-appearance: none;  /* Remove default styling */
+    appearance: none;
+    border-radius: 5px;
+    background: #ddd; /* Light gray background */
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Slider thumb (the circle) */
+.slider-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #588520; /* Blue thumb */
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.slider-value {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.slider-col {
+    flex: 1;
+    min-width: 200px; 
+}
+
+
+
+.dropdown-row {
+    padding-bottom: 20px;
+    align-items:start;
+}
+
+.repo-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    opacity: 0;
+    animation: slideIn 0.5s ease-in-out forwards;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+
+.card-title:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.recs-col {
+    padding: 20px;
+    width: 100%;
+    height: 400px;
+    background-color: honeydew;
+    flex: 1;
+    text-align: center;
+}
+
+.recs-list {
+    padding-left: 30px;
+}
+.allRepos-col {
+    padding: 20px;
+    flex: 4;
+}
+
+
+
+body {
+    background-color: gainsboro;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.repo-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 5px;
+    margin: 10px 0; 
+  }
+
+  .popup-element {
+    top: 50%;
+    left:50%;
+    background-color: mintcream;
+    border-color: gray;
+    display: none;
+  }
+
+  .explanation-card {
+    padding: 10px;
+    font-size: 10px;
+    justify-content: center;
+}
+
+.recs-col .row {
+    flex: 1;
+}
+
+
+.explanation-card > p {
+    margin-bottom: 0;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    gap: 10px;
+    margin: 10px;
+    width: 90%;
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+#main-title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #a0ba41;
+}
+
+#secondary-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#first-row {
+    height: 1px;
+}
+
+#repo-search-bar {
+    width: 80%;
+}
+
