@@ -1,194 +1,197 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <meta name="author" content="Ellery Sparkman">
-        <meta property="og:title" content="Brown Practice">
-        <meta property="og:description" content="">
-        <meta name="description" content="Home page for Brown Practice">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style/styles.css">
-        <meta name="icon" content="none">
-        <!-- <link rel="stylesheet" href="fonts/Acumin-Variable-Concept.ttf" type="font/ttf" /> -->
-        <title>Brown Practice</title>   
-        
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ellery Sparkman" />
+    <meta property="og:title" content="CCV RepoRanker" />
+    <meta property="og:description" content="" />
+    <meta name="description" content="Home page for RepoRanker" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/styles.css" />
+    <meta name="icon" content="none" />
+    <title>CCV RepoRanker</title>
+  </head>
 
-    <body>
-        <!-- Title Row -->
+  <body>
+    <!-- Title Row -->
     <div class="row title-row">
-        <div class="col">
-            <h2 id="main-title">RepoRanker   <small class="text-muted" id="secondary-title">A Brown CCV GitHub Repository Organization Tool</small>
-                <div class="help-icon-container">
-                    <span class="help-icon" id="help-button">?</span>
-                    <div class="speech-bubble" id="help-bubble">Adjust the weight of each sorting category and watch the repositories re-sort! <br><br> Red is recommended to delete, yellow is in the middle, and green is well used. <br> <br> Happy sorting!</div>
-                </div>   
-            </h2>
-   
+      <div class="col">
+        <h2 class="main-title">
+          RepoRanker
+          <small class="text-muted secondary-title" id="secondary-title"
+            >A Brown CCV GitHub Repository Organization Tool</small
+          >
+          <!-- help bubble -->
+          <div class="help-icon-container">
+            <span class="help-icon" id="help-button">?</span>
+            <div class="speech-bubble" id="help-bubble">
+              Adjust the weight of each sorting category and watch the
+              repositories re-sort! <br /><br />
+              Red is recommended to delete, yellow is in the middle, and green
+              is well used. <br />
+              <br />
+              The up arrow signifies, "the more the better", and vice versa.
+              <br />
+              <br />
+              Happy sorting! 
+            </div>
           </div>
+        </h2>
+      </div>
     </div>
 
     <div class="row" id="info-row">
-        <!--All Repos -->
-        <div class="col allRepos-col" id="allRepos-col">
-            <div class="row">
-            <div class="col slider-col">
-
-            <!--  engagment slider-->
-                <div class="slider-container">
-                <label for="forking-slider" class="form-label">Amount of Forking</label>
-                <input 
-                        type="range" 
-                        class="form-range slider-bar" 
-                        id="forking-slider" 
-                        min="0" 
-                        max="100" 
-                        step="1" 
-                        value="1">        
-                        <span class="slider-value" id="forking-slider-value">1</span>
-                </div>
-                <div class="slider-container">
-                    <label for="size-slider" class="form-label">Size</label>
-                    <input 
-                            type="range" 
-                            class="form-range slider-bar" 
-                            id="size-slider" 
-                            min="0" 
-                            max="100" 
-                            step="1" 
-                            value="1">        
-                            <span  class="slider-value"  id="size-slider-value">1</span>
-                    </div>
-                        <!--  recent commits slider-->
-                            <div class="slider-container">
-                            <label for="commits-slider" class="form-label">Recent Commits</label>
-                            <input 
-                                    type="range" 
-                                    class="form-range slider-bar"  
-                                    id="commits-slider" 
-                                    min="0" 
-                                    max="100" 
-                                    step="1" 
-                                    value="1">        
-                                    <span  class="slider-value" id="commits-slider-value">1</span>
-                        </div>
-                    </div>
-                    <div class="col slider-col">
-                                       <!--  recent commits slider-->
-                                       <div class="slider-container">
-                                        <label for="watchers-slider" class="form-label">Watchers</label>
-                                        <input 
-                                                type="range" 
-                                                class="form-range slider-bar"  
-                                                id="watchers-slider" 
-                                                min="0" 
-                                                max="100" 
-                                                step="1" 
-                                                value="1">        
-                                                <span class="slider-value"  id="watchers-slider-value">1</span>
-                                    </div>
-
-                    </div>
-                </div>
-            
-
-            <!--  dropdowns-->
-
-             <div class="row dropdown-row">
-                <!-- sorting tool -->
-   
+      <!--All Repos -->
+      <div class="col allRepos-col" id="allRepos-col">
+        <div class="row">
+          <div class="col slider-col">
+            <!--  sliders-->
+            <div class="slider-container">
+              <label for="forking-slider" class="form-label"
+                > Forking <small class="label-explanation">↑</small>
+            </label>
+              <input
+                type="range"
+                class="form-range slider-bar"
+                id="forking-slider"
+                min="0"
+                max="100"
+                step="1"
+                value="1"
+              />
+              <span class="slider-value" id="forking-slider-value">1</span>
             </div>
+            <div class="slider-container">
+              <label for="size-slider" class="form-label">Size 
+                <small class="label-explanation">↓</small>
 
-            <!-- search bar  -->
-            <div class="row" id="search-row">
-                <div class="input-group mb-3" id="repo-search-bar">
-                    <input type="text" id="searchInput" onkeyup="repoSearch()" class="form-control me-2" placeholder="Type the name of a repo..." aria-label="Repo" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <!-- <button class="btn btn-outline-secondary" type="button">Search!</button> -->
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="dropdown">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="sortMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sorting By Date (Oldest First)
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="sortMenuButton">
-                        <a class="dropdown-item" id="date-published"  href="#">Date Published (Oldest First) </a>
-                        <a class="dropdown-item" id="date-last-accessed" href="#">Date Accessed (Newest First)</a>
-                        <a class="dropdown-item" id="alphabetical" href="#">Alphabetical (A-Z)</a>
-                      </div>
-                    </div>
-                  </div>
-                  
+              </label>
+              <input
+                type="range"
+                class="form-range slider-bar"
+                id="size-slider"
+                min="0"
+                max="100"
+                step="1"
+                value="1"
+              />
+              <span class="slider-value" id="size-slider-value">1</span>
             </div>
-            <h5 id="numRepos"></h5>
-            <h5 id="sortByDate"></h5>
-
-
-            <!-- TEST -->
-            <div class="grid-container" id="repos-container">
+            <div class="slider-container">
+              <label for="commits-slider" class="form-label"
+                >Time Since Last Commit
+                <small class="label-explanation">↓</small>
+                </label
+              >
+              <input
+                type="range"
+                class="form-range slider-bar"
+                id="commits-slider"
+                min="0"
+                max="100"
+                step="1"
+                value="1"
+              />
+              <span class="slider-value" id="commits-slider-value">1</span>
             </div>
+          </div>
+          <div class="col slider-col">
+            <div class="slider-container">
+              <label for="watchers-slider" class="form-label">Watchers
 
+                <small class="label-explanation">↑</small>
+            </label>
+              <input
+                type="range"
+                class="form-range slider-bar"
+                id="watchers-slider"
+                min="0"
+                max="100"
+                step="1"
+                value="1"
+              />
+              <span class="slider-value" id="watchers-slider-value">1</span>
+            </div>
+            <div class="slider-container">
+              <label for="issues-slider" class="form-label">Open Issues
+                <small class="label-explanation">↑</small>
 
+              </label>
+              <input
+                type="range"
+                class="form-range slider-bar"
+                id="issues-slider"
+                min="0"
+                max="100"
+                step="1"
+                value="1"
+              />
+              <span class="slider-value" id="issues-slider-value">1</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Recs -->
-        <!-- <div class="col card recs-col">
-            <div class="row">
-                <h5>Top 6 Recommendations</h3>
-                <ul class="recs-list">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="row explanation-row">
-                <div class="card explanation-card">
-                    <p>We make our reccomendations based on the repositories that are the least used, take up the most space, and are the oldest! But create your own parameters on the left.</p>
-                </div>
-            </div>
+        <!--  dropdowns-->
 
-        </div> -->
+        <div class="row dropdown-row">
+          <!-- sorting tool -->
+        </div>
 
+        <!-- search bar  -->
+        <div class="row" id="search-row">
+          <div class="input-group mb-3" id="repo-search-bar">
+            <input
+              type="text"
+              id="searchInput"
+              onkeyup="repoSearch()"
+              class="form-control me-2"
+              placeholder="Type the name of a repo..."
+              aria-label="Repo"
+              aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+            </div>
+          </div>
+          <div class="col">
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="sortMenuButton"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Sorting By Date (Oldest First)
+              </button>
+              <div class="dropdown-menu" aria-labelledby="sortMenuButton">
+                <a class="dropdown-item" id="date-published" href="#"
+                  >Date Published (Oldest First)
+                </a>
+                <a class="dropdown-item" id="date-last-accessed" href="#"
+                  >Date Accessed (Newest First)</a
+                >
+                <a class="dropdown-item" id="alphabetical" href="#"
+                  >Alphabetical (A-Z)</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <h5 id="numRepos"></h5>
+        <h5 id="sortByDate"></h5>
+
+        <div class="grid-container" id="repos-container"></div>
+      </div>
     </div>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyDw08N6LtgzsVM_0-mbu3Ge4Mvj3n12LYY",
-          authDomain: "ellery-brown.firebaseapp.com",
-          projectId: "ellery-brown",
-          storageBucket: "ellery-brown.firebasestorage.app",
-          messagingSenderId: "630427542689",
-          appId: "1:630427542689:web:2cbc6fe9c4a61514b47ce0",
-          measurementId: "G-19XS60FT3F"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    </body>
-
-    <script src="app.js"></script>
-
+  </body>
+  <script src="app.js"></script>
 </html>
