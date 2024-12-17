@@ -11,7 +11,8 @@ The main HTML file for this single-page site.
 #### app.js: 
 The JavaScript file that handles fetching data from the GitHub API, sorting the repositories, and rendering them on the page.
 #### style.css: 
-Basic CSS for styling the page.
+Basic CSS Styling for the page.
+
 ---
 
 ## Features
